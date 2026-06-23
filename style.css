@@ -398,6 +398,11 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 0 3px rgba(45,212,191,.15);
 }
 .contact-form .btn { align-self: center; margin-top: .5rem; }
+.form-note {
+  text-align: center; color: var(--accent); font-size: .9rem; margin: .3rem 0 0;
+  opacity: 0; transition: opacity .3s;
+}
+.form-note.show { opacity: 1; }
 .contact-direct {
   display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2.5rem 0 1.5rem;
 }

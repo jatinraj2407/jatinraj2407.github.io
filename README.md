@@ -21,13 +21,10 @@ Just open `index.html` in any browser. (Skill icons load from a CDN, so keep int
 Drop a **square** photo named **`profile.jpg`** into this folder.
 It appears automatically in the About section. Until then a styled "JR" monogram shows instead.
 
-### 2. Enable the contact form (optional but recommended)
-The form uses [Formspree](https://formspree.io) (free, no backend):
-1. Sign up at formspree.io and create a form → you get an ID like `xyzabcd`.
-2. In `index.html`, find `action="https://formspree.io/f/YOUR_FORM_ID"` and replace
-   `YOUR_FORM_ID` with your real ID.
-
-If you skip this, the email and phone links still work fine.
+### 2. Contact form
+The contact form opens the visitor's email app pre-filled to `rajjatint@gmail.com`
+(handled in `script.js`). No backend or signup needed. The direct email/phone links
+in the Contact section also work as a fallback.
 
 ---
 

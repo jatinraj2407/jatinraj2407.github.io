@@ -71,6 +71,30 @@ if (typedEl) {
   type();
 }
 
+// ===== Contact form → opens visitor's email app (mailto) =====
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const val = sel => contactForm.querySelector(sel).value.trim();
+    const name = val('[name="name"]');
+    const email = val('[name="email"]');
+    const message = val('[name="message"]');
+
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+    window.location.href = `mailto:rajjatint@gmail.com?subject=${subject}&body=${body}`;
+
+    const note = document.getElementById('form-note');
+    if (note) {
+      note.textContent = 'Opening your email app… If nothing happens, email me directly at rajjatint@gmail.com.';
+      note.classList.add('show');
+    }
+  });
+}
+
 // ===== Animated stat counters =====
 const statObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

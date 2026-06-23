@@ -410,14 +410,15 @@
         have a question or just want to say hi, my inbox is always open — I'll get back to you!
       </p>
 
-      <!-- Contact form: replace YOUR_FORM_ID with your Formspree ID to enable (see README). -->
-      <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <!-- Contact form: opens the visitor's email app pre-filled (handled in script.js). -->
+      <form class="contact-form reveal" id="contact-form">
         <div class="form-row">
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Your email" required />
         </div>
         <textarea name="message" rows="5" placeholder="Your message" required></textarea>
         <button type="submit" class="btn btn-primary">Send Message →</button>
+        <p class="form-note" id="form-note" role="status"></p>
       </form>
 
       <div class="contact-direct reveal">
