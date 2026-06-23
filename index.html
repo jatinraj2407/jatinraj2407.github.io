@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>T Jatin Raj · Full Stack Developer</title>
+  <meta name="description" content="Portfolio of T Jatin Raj — Full Stack Developer at Cognizant. React, Angular, Java, Spring Boot, Python, MySQL and AWS." />
+  <meta name="author" content="T Jatin Raj" />
+  <meta property="og:title" content="T Jatin Raj · Full Stack Developer" />
+  <meta property="og:description" content="Full Stack Developer at Cognizant building enterprise web applications. Projects, skills, experience and achievements." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon: "JR" initials monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d1117'/><text x='50' y='54' font-size='44' font-family='Arial,sans-serif' font-weight='bold' fill='%232dd4bf' text-anchor='middle' dominant-baseline='central'>JR</text></svg>" />
+
+  <!-- Apply saved theme before paint (no flash) + flag JS as available -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      var t = localStorage.getItem('theme');
+      if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="brand">T<span>JR</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">🌙</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
+      <div class="hero-text-col">
+        <span class="availability reveal"><span class="pulse"></span> Available for new opportunities</span>
+        <p class="hero-eyebrow reveal">Hi, my name is</p>
+        <h1 class="hero-title reveal">T Jatin Raj.</h1>
+        <h2 class="hero-subtitle reveal">I build <span class="typed" id="typed"></span><span class="type-cursor">|</span></h2>
+        <p class="hero-text reveal">
+          Full Stack Developer at <strong>Cognizant</strong>, delivering enterprise web
+          applications across the stack with React, Spring Boot, Python, MySQL and AWS.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="code-card">
+          <div class="code-bar">
+            <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+            <span class="code-file">developer.js</span>
+          </div>
+          <pre class="code-body"><code><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">'T Jatin Raj'</span>,
+  <span class="c-prop">role</span>: <span class="c-str">'Full Stack Developer'</span>,
+  <span class="c-prop">company</span>: <span class="c-str">'Cognizant'</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">'React'</span>, <span class="c-str">'Spring Boot'</span>,
+           <span class="c-str">'Python'</span>, <span class="c-str">'AWS'</span>],
+  <span class="c-prop">learning</span>: <span class="c-bool">true</span>,
+  <span class="c-prop">coffee</span>: <span class="c-bool">Infinity</span>
+};</code></pre>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">▾</a>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-band">
+    <div class="container stats">
+      <div class="stat reveal"><span class="stat-num" data-target="1" data-suffix="+">0</span><span class="stat-label">Years Experience</span></div>
+      <div class="stat reveal"><span class="stat-num" data-target="6" data-suffix="+">0</span><span class="stat-label">Projects Built</span></div>
+      <div class="stat reveal"><span class="stat-num" data-target="5">0</span><span class="stat-label">Certifications</span></div>
+      <div class="stat reveal"><span class="stat-num" data-target="15" data-suffix="+">0</span><span class="stat-label">Technologies</span></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="num">01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>T Jatin Raj</strong>, a Full Stack Developer currently working at
+            <strong>Cognizant</strong>, where I contribute to enterprise insurance applications
+            using React, Spring Boot, Python, MySQL and AWS. I enjoy building scalable solutions,
+            solving real-world problems, and continuously learning new technologies to create
+            meaningful digital experiences.
+          </p>
+          <p>
+            Beyond work, I'm a curious learner and a fitness enthusiast who believes in consistency
+            and self-improvement. I enjoy reading fiction, traveling and exploring new places, and
+            maintaining an active lifestyle — interests that keep me disciplined, creative and open
+            to new perspectives.
+          </p>
+          <p>
+            I also love creating content and sharing experiences through Instagram reels, and
+            connecting with people from different backgrounds. I believe growth comes not only from
+            technical expertise but from meaningful relationships, collaboration and lifelong
+            learning.
+          </p>
+          <ul class="about-facts">
+            <li><span>💼</span> Programmer Analyst @ Cognizant · 1+ yr experience</li>
+            <li><span>🎓</span> B.E. Computer Science · CGPA 8.73</li>
+            <li><span>📍</span> Kolkata, India</li>
+          </ul>
+          <a href="https://drive.google.com/file/d/17FOuiFgS6tokmLovRYRTA2I8b3DyN2Nd/view?usp=sharing"
+             target="_blank" rel="noopener" class="btn btn-primary">Download Résumé ↓</a>
+        </div>
+        <div class="about-photo reveal">
+          <!-- Drop a square photo named profile.jpg in this folder; it will appear automatically.
+               Until then, a styled monogram shows as a fallback. -->
+          <div class="photo-frame">
+            <img src="profile.jpg" alt="T Jatin Raj"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="photo-fallback">JR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Do -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title centered reveal">What I Do</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🎨</div>
+          <h3>Frontend Development</h3>
+          <p>Building responsive, accessible and pixel-perfect interfaces with React, Angular and
+             modern JavaScript — backed by clean component architecture and Vite tooling.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">⚙️</div>
+          <h3>Backend Development</h3>
+          <p>Designing secure REST APIs and business logic with Java, Spring Boot and Python —
+             JWT auth, JPA/Hibernate data models and well-documented Swagger contracts.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">☁️</div>
+          <h3>Cloud &amp; Integration</h3>
+          <p>Integrating apps with AWS Lambda, optimizing MySQL databases, and wiring up CI/CD
+             pipelines to ship reliable, scalable enterprise software.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="num">02.</span> Skills &amp; Tools</h2>
+      <div class="skill-groups">
+
+        <div class="skill-group reveal">
+          <h3>Frontend</h3>
+          <div class="skill-pills">
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />React</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="" />Angular</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" />HTML5</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" />CSS3</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" />Bootstrap</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="" />Vite</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Backend</h3>
+          <div class="skill-pills">
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" />Java</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="" />Spring Boot</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="" />Flask</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Database</h3>
+          <div class="skill-pills">
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />MySQL</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="" />Oracle SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="skill-pills">
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" />AWS Lambda</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />Git</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />GitHub</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="" />Postman</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg" alt="" />Swagger</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Also</h3>
+          <div class="skill-pills">
+            <span class="pill pill-text">REST APIs</span>
+            <span class="pill pill-text">JWT</span>
+            <span class="pill pill-text">Spring Security</span>
+            <span class="pill pill-text">Spring Data JPA</span>
+            <span class="pill pill-text">Hibernate</span>
+            <span class="pill pill-text">Maven</span>
+            <span class="pill pill-text">CI/CD</span>
+            <span class="pill pill-text">Agile / Scrum</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="num">03.</span> Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Programmer Analyst</h3>
+            <p class="timeline-meta">Cognizant Technology Solutions · Kolkata, India · May 2025 – Present</p>
+            <p><strong>Underwriting Insurance Platform</strong> — React · Spring Boot · Python · MySQL · AWS Lambda</p>
+            <ul>
+              <li>Developed React frontend modules for insurance workflows: quote generation, proposal submission and document validation.</li>
+              <li>Built and integrated Spring Boot REST APIs, coordinating data models and API contracts across frontend and backend teams.</li>
+              <li>Contributed to an AI-powered document validation pipeline on AWS Lambda (Python), integrated into underwriting and policy management flows.</li>
+              <li>Optimised MySQL schema and queries for new feature rollouts; resolved PDF generation and cross-environment rendering issues.</li>
+              <li>Configured Vite build tooling and fixed cross-app JWT authentication and inter-application data transfer issues.</li>
+            </ul>
+            <p><strong>Smart Leave Management System</strong> — React · Spring Boot · MySQL · JWT · Swagger <em>(training project)</em></p>
+            <ul>
+              <li>Built the React frontend with JWT auth and role-based dashboards (Employee / Manager / Admin) plus leave application and approval flows.</li>
+              <li>Integrated Spring Boot REST APIs for leave tracking, balance management and automated email notifications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Web Developer Intern</h3>
+            <p class="timeline-meta">Internship Studio · Remote · Dec 2021 – Feb 2022</p>
+            <ul>
+              <li>Built a responsive e-commerce frontend using HTML, CSS, Bootstrap and JavaScript with form validation and dynamic UI interactions.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="num">04.</span> Featured Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/jatinraj2407/Advanced-Weather-Monitoring-and-Disaster-Mitigation-System" target="_blank" rel="noopener" aria-label="GitHub repository">↗</a>
+          </div>
+          <h3>Advanced Weather Monitoring &amp; Disaster Mitigation System</h3>
+          <p>A real-time weather monitoring and disaster mitigation platform with flood-zone mapping,
+             emergency alerts and shelter-location workflows. Led from research to deployment using
+             analytics and predictive modeling — research published at an IEEE conference.</p>
+          <ul class="tags"><li>Python</li><li>Machine Learning</li><li>JSON</li><li>Research</li></ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/jatinraj2407/netflix-clone" target="_blank" rel="noopener" aria-label="GitHub repository">↗</a>
+          </div>
+          <h3>Netflix Clone</h3>
+          <p>A feature-rich streaming UI clone built with React custom hooks and Context API, Firebase
+             authentication and Firestore, and live movie data via the TMDB API with YouTube trailer
+             embedding.</p>
+          <ul class="tags"><li>React</li><li>Firebase</li><li>TMDB API</li><li>Styled Components</li></ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/jatinraj2407/E-Commerce-Website" target="_blank" rel="noopener" aria-label="GitHub repository">↗</a>
+          </div>
+          <h3>E-Commerce Website</h3>
+          <p>A responsive e-commerce front end built with HTML, CSS and Bootstrap, with JavaScript
+             powering form validation, dynamic user interactions and a seamless shopping flow.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li></ul>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="folder">📁</span>
+            <a href="https://github.com/jatinraj2407/Just-Ride-It---Gaming-Webpage" target="_blank" rel="noopener" aria-label="GitHub repository">↗</a>
+          </div>
+          <h3>Just Ride It — Gaming Webpage</h3>
+          <p>A dynamic, immersive landing page for an upcoming arcade game, featuring a background
+             trailer and parallax effects with a strong focus on sleek UI/UX design.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>Parallax</li><li>JavaScript</li></ul>
+        </article>
+
+      </div>
+
+      <h3 class="github-heading reveal">GitHub Activity</h3>
+      <div class="github-stats reveal">
+        <img loading="lazy" alt="GitHub stats"
+             src="https://github-readme-stats.vercel.app/api?username=jatinraj2407&show_icons=true&hide_border=true&bg_color=00000000&title_color=2dd4bf&icon_color=38bdf8&text_color=8b97a7" />
+        <img loading="lazy" alt="Top languages"
+             src="https://github-readme-stats.vercel.app/api/top-langs/?username=jatinraj2407&layout=compact&hide_border=true&bg_color=00000000&title_color=2dd4bf&text_color=8b97a7" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="num">05.</span> Achievements &amp; Certifications</h2>
+      <div class="cards-grid">
+        <div class="info-card reveal">
+          <h3>IEEE Xplore Publication</h3>
+          <p>Published research on the Advanced Weather Monitoring &amp; Disaster Mitigation System.
+             <a href="https://ieeexplore.ieee.org/document/10601763/metrics#metrics" target="_blank" rel="noopener">Read the paper ↗</a></p>
+        </div>
+        <div class="info-card reveal">
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Cloud certification from Amazon Web Services — working knowledge of cloud technologies and AWS services.</p>
+        </div>
+        <div class="info-card reveal">
+          <h3>React JS</h3>
+          <p>Certification via Coursera — component-based development, hooks and state management.</p>
+        </div>
+        <div class="info-card reveal">
+          <h3>Web Design &amp; Development</h3>
+          <p>Certification via Udemy — modern responsive front-end design and development practices.</p>
+        </div>
+        <div class="info-card reveal">
+          <h3>Google Data Analytics</h3>
+          <p>Professional certificate via Coursera — data analysis, visualization and data-driven decision making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="num">06.</span> Education</h2>
+      <div class="cards-grid">
+        <div class="info-card reveal">
+          <h3>B.E. — Computer Science &amp; Engineering</h3>
+          <p class="edu-meta">Sathyabama Institute of Science and Technology, Chennai</p>
+          <p><strong>CGPA: 8.73</strong></p>
+        </div>
+        <div class="info-card reveal">
+          <h3>Class XII — PCM</h3>
+          <p class="edu-meta">Sri Chaitanya Junior College, Hyderabad</p>
+          <p><strong>81%</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-inner">
+      <h2 class="section-title centered reveal"><span class="num">07.</span> Get In Touch</h2>
+      <p class="contact-lead reveal">
+        I'm always open to new opportunities, collaborations and good conversations. Whether you
+        have a question or just want to say hi, my inbox is always open — I'll get back to you!
+      </p>
+
+      <!-- Contact form: replace YOUR_FORM_ID with your Formspree ID to enable (see README). -->
+      <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+        </div>
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message →</button>
+      </form>
+
+      <div class="contact-direct reveal">
+        <a href="mailto:rajjatint@gmail.com" class="contact-link">✉ rajjatint@gmail.com</a>
+        <a href="tel:+917587402301" class="contact-link">📞 +91 75874 02301</a>
+      </div>
+
+      <div class="social-links reveal">
+        <a href="https://www.linkedin.com/in/jatin-raj-8667651b7/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/jatinraj2407" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        <a href="https://www.instagram.com/jatinraj_2407/" target="_blank" rel="noopener" class="btn btn-ghost">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed &amp; built by T Jatin Raj · &copy; <span id="year"></span></p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
