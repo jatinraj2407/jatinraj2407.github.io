@@ -106,7 +106,7 @@ img { max-width: 100%; display: block; }
 .brand {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700; font-size: 1.4rem; color: var(--text);
-  letter-spacing: 1px;
+  letter-spacing: 1px; position: relative; z-index: 101;
 }
 .brand span { color: var(--accent); }
 .nav-links { display: flex; gap: .3rem; list-style: none; margin: 0; padding: 0; }
@@ -117,7 +117,7 @@ img { max-width: 100%; display: block; }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .nav-links a.active { background: rgba(45,212,191,.08); }
 
-.nav-actions { display: flex; align-items: center; gap: .6rem; }
+.nav-actions { display: flex; align-items: center; gap: .6rem; position: relative; z-index: 101; }
 .nav-backdrop { display: none; }
 .theme-toggle {
   background: var(--surface); border: 1px solid var(--border);
@@ -448,29 +448,21 @@ img { max-width: 100%; display: block; }
 
   .nav-toggle { display: flex; }
   .nav-links {
-    position: fixed; top: 0; right: 0; bottom: 0;
-    width: min(80vw, 300px);
-    flex-direction: column; justify-content: flex-start; align-items: stretch; gap: .35rem;
-    padding: 5.5rem 1.4rem 2rem;
-    background: var(--bg-alt);
-    box-shadow: -12px 0 40px rgba(0,0,0,.35);
-    transform: translateX(105%); transition: transform .32s ease;
+    position: fixed; inset: 0;
+    flex-direction: column; justify-content: center; align-items: center; gap: 1.3rem;
+    padding: 5rem 2rem 2rem;
+    background: var(--bg);
+    transform: translateX(100%); opacity: 0;
+    transition: transform .35s ease, opacity .35s ease;
     z-index: 95; overflow-y: auto;
   }
-  .nav-links.open { transform: translateX(0); }
-  .nav-links li { width: 100%; }
+  .nav-links.open { transform: translateX(0); opacity: 1; }
+  .nav-links li { width: auto; }
   .nav-links a {
-    display: block; width: 100%; font-size: 1.05rem;
-    padding: .85rem 1rem; border-radius: 10px; color: var(--text);
+    display: block; font-size: 1.35rem; color: var(--text);
+    padding: .5rem 1.6rem; border-radius: 10px;
   }
   .nav-links a:hover, .nav-links a.active { background: rgba(45,212,191,.12); color: var(--accent); }
-
-  .nav-backdrop {
-    display: block;
-    position: fixed; inset: 0; background: rgba(0,0,0,.55);
-    opacity: 0; pointer-events: none; transition: opacity .32s; z-index: 94;
-  }
-  .nav-backdrop.open { opacity: 1; pointer-events: auto; }
 }
 
 @media (max-width: 520px) {
