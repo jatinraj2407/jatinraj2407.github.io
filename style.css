@@ -447,6 +447,11 @@ img { max-width: 100%; display: block; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
 
   .nav-toggle { display: flex; }
+
+  /* Remove blur on mobile: backdrop-filter makes the navbar a containing block
+     for position:fixed children, which would shrink the overlay to navbar size. */
+  .navbar { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--nav-bg-scrolled); }
+
   .nav-links {
     position: fixed; inset: 0;
     flex-direction: column; justify-content: center; align-items: center; gap: 1.3rem;
