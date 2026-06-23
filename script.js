@@ -116,24 +116,23 @@ const statObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
 
-// ===== Mobile nav toggle =====
+// ===== Mobile nav toggle (drawer + backdrop) =====
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');
+const navBackdrop = document.getElementById('nav-backdrop');
 
-navToggle.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
+const setMenu = (open) => {
+  navLinks.classList.toggle('open', open);
   navToggle.classList.toggle('open', open);
+  navBackdrop.classList.toggle('open', open);
   navToggle.setAttribute('aria-expanded', open);
-});
+  document.body.style.overflow = open ? 'hidden' : '';
+};
 
-// Close the mobile menu after clicking a link
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
+navToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+navBackdrop.addEventListener('click', () => setMenu(false));
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
 // ===== Back to top =====
 const backToTop = document.getElementById('back-to-top');
